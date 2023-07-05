@@ -1,12 +1,13 @@
 const nodemailer = require('../config/nodemailer');
 
 exports.newComment  = (comment) =>{
-    console.log('inside the Comment mailer',comment);
+// Here sent sytax and store html templates
+let htmlString = nodemailer.renderTemplate({comment:comment},'/comments/new_comment.ejs') // this is path of ejs file
     nodemailer.transporter.sendMail({
         from:'trialgamail@gmail.com',
         to:comment.user.email,
         subject:'New Comment Published !',
-        html:'<h1>Yup Your Comment Now Is Published </h1>'
+        html:htmlString
     },(err,info)=>{
         if(err){
             console.log('Error In Sending Mail ::', err);
