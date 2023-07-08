@@ -13,7 +13,7 @@ let htmlString = nodemailer.renderTemplate({comment:comment},'/comments/new_comm
             console.log('Error In Sending Mail ::', err);
             return;
         }
-        // console.log('Message Sent',info);
+        // console.log('Message Sent',info); // this is email sent info hain
         return;
     });
 }
