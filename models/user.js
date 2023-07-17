@@ -23,8 +23,12 @@ const userSchema = new mongoose.Schema({
     resetToken:{
         type:Object,
         default: ''
-    }
-    
+    }, friendships: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Friendship'
+        }
+    ]
 }, {
     timestamps: true
 });

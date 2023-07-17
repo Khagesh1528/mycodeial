@@ -1,11 +1,12 @@
         <link rel="stylesheet" href="/css/user_profile.css">
+        
         <h1>
-            Codeial / Profile Page
+         Profile Page
         </h1>
-        <% if(user.id==profile_user.id){ %>
+        <% if(user.id == profile_user.id){ %>
                 <img src="<%= user.avatar %>" alt="<%= user.name %>" id="profile_picture">
             <%}%>
-        
+            
         <div>
             <img id="profile-preview" >
         </div>
@@ -26,6 +27,16 @@
             <!-- else show only the profile info -->
             <p><%= profile_user.name %></p>
             <p><%= profile_user.email %></p>
+            <!-- <button id="add-friend">
+                <a href="/add-friends/send-request/<%= user.id %>">Add Friend</a>
+            </button> -->
+            <form action="/friendship/send-request/" method="post" id="add-friend">
+                <input type="name" name="name" value="<%= user.name %>">
+                <input type="text" name="fromUserId" value="<%=  user.id%>">
+                <input type="text" name="toUserId" value="<%=  profile_user._id %>">
+                <button type="submit">Add Friend</button>
+            </form>
         <%} %>
-
+            
         <script src="/js/profile-preview.js"></script>
+        <script src="/js/user_profile.js</script>

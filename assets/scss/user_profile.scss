@@ -1,5 +1,14 @@
 body{
     background-color: lightblue;
+    #add-friend {
+            position: absolute;
+            margin-top: 16px;
+            margin-left: 100px;
+
+        a{
+            text-decoration: none;
+        }
+    }
 
     #profile_picture{
         width: 100;

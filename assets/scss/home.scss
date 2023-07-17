@@ -1,15 +1,54 @@
 #home-container{
     display: flex;
+    // For Post 
+    #posts-list-container{
+        #username{
+           
+          
+           font-family: sans-serif;
+           font-size: 12px;
+            
+        }
+    }
+   
+    #request-friend{
+        width: 20%;
+        padding: 10px;
+        border-left: 1px solid grey;
+    }
     
     #feed-posts{
-        width: 70%;
+        width: 50%;
         padding: 10px;
     }
 
-    #user-friends{
+    #feed-user-friends{
+        display: flex;
         width: 30%;
-        padding: 10px;
-        border-left: 1px solid lightgrey;
-        height: 100%;
+        height: auto;
+        flex-direction: column;
+       
+        #friends-feed {
+            position: relative;
+                margin-left: 33px;
+                width: 100%;
+                padding: 10px;
+                border-left: 1px solid lightgrey;
+                height: auto;
+            }
+        
+            #user-friends {
+               position: relative;
+                
+                border-top: 1px solid black;
+                margin-left: 33px;
+                width: 100%;
+                padding: 10px;
+                border-left: 1px solid lightgrey;
+                height: 100%;
+                overflow-y: 10px;
+            }
+
     }
+    
 }

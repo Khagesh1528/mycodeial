@@ -1,5 +1,11 @@
 body {
   background-color: lightblue; }
+  body #add-friend {
+    position: absolute;
+    margin-top: 16px;
+    margin-left: 100px; }
+    body #add-friend a {
+      text-decoration: none; }
   body #profile_picture {
     width: 100;
     height: 100;
